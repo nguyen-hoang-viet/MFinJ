@@ -55,7 +55,7 @@ const getkhacPage = async (req, res) => {
 const getdatabasePage = async (req, res) => {
     let results = await getdatabase();
 
-    return res.render("result.ejs", { listJobs: results });
+    return res.render("showDB.ejs", { listJobs: results });
 };
 
 

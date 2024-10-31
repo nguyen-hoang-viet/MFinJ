@@ -1,0 +1,42 @@
+/*reset margin and padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------------table result-----------------*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 24px;
+}
+
+th:nth-child(1), td:nth-child(1),
+th:nth-child(2), td:nth-child(2) {
+    width: 40%; /* Chiều rộng cho hai cột đầu */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 20%; /* Chiều rộng cho cột cuối */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    word-wrap: break-word; /* Để nội dung xuống dòng nếu quá dài */
+}
+
+tr:hover {background-color: #f2f2f2;}
+
+.table-container {
+    padding: 15px 20px;
+}
+
+a {
+    color: blue;
+}
+

@@ -149,6 +149,10 @@ tr:hover {background-color: #f2f2f2;}
     padding: 15px 20px;
 }
 
+a {
+    color: blue;
+}
+
 /*-----------------------style for title-------------------------*/
 .title {
     background-color: black;

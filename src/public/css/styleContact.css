@@ -11,3 +11,20 @@ body {
     background-position: center; /* Canh giữa ảnh */
     background-repeat: no-repeat; /* Không lặp lại ảnh */
 }
+
+a {
+    font-size: 24px;
+    padding: 20px 20px;
+    text-decoration: none; /* Không có gạch chân */
+    color: white; /* Thay đổi màu chữ nếu cần */
+    font-weight: bold;
+    /*background: linear-gradient(to right, #5fccff, #7be4fe); /* Thay đổi màu gradient theo ý muốn */
+    background-color: black;
+    border-radius: 5px; /* Tùy chọn: bo góc cho nút */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
