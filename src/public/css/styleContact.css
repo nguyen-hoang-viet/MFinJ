@@ -1,0 +1,13 @@
+/*reset margin and padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*set background*/
+body {
+    background-image: url('../image/pageNotFound.png');
+    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
+    background-position: center; /* Canh giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+}
