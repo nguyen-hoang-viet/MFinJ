@@ -1,0 +1,180 @@
+/*reset margin and padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling topnav container */
+.topnav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-top {
+    margin: 0px 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling logo container */
+.logo img {
+    width: 108px; /* Đặt kích thước logo */
+    height: 108px;
+    object-fit: contain;
+    /*border-radius: 10px;*/
+}
+
+/* Styling search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 4px solid #000000;
+}
+
+.search-bar input {
+    width: 20vw; /* 30% chiều rộng màn hình */
+    padding: 20px 25px;
+    font-size: 24px;
+    color: #000000;
+    background-color: transparent; /*nền trong suốt*/
+    border: #000000;
+    outline: none;
+}
+
+/* .search-bar a {
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    text-decoration: none;
+} */
+
+.search-bar select{
+    font-size: 24px;
+    border: none;
+    padding: 5px 0px;
+}
+
+.search-bar button {
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.topnav-right {
+    float: right;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style the links inside the navigation bar */
+.topnav-right a {
+    margin: 0 10px; /* Tạo khoảng cách 15px ở hai bên */
+    color: black;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none; /*sử dụng tạo liên kết không có gạch chân*/
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+/* Change the color of links on hover */
+.topnav-right a:hover {
+    color: white !important;
+    font-size: 24px !important;
+    background-color: black !important
+    /*border-bottom: 4px solid white;*/
+}
+
+/*--------------button job categoties--------------*/
+.job-categories {
+    padding-left: 15.5vw;
+    display: flex;
+    gap: 5px; 
+}
+
+.job-categories a {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 20px; /* Bo tròn nút */
+    background-color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.job-categories a:hover {
+    background-color: black;
+    color: white;
+}
+
+/*-----------------table result-----------------*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 24px;
+    background-color: #d9d9d9;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    width: 50%; /* Chiều rộng ngang nhau cho cả hai ô */
+    word-wrap: break-word; /* Để nội dung xuống dòng nếu quá dài */
+}
+
+tr:hover {background-color: #f2f2f2;}
+
+.table-container {
+    padding: 15px 20px;
+}
+
+a {
+    color: blue;
+}
+
+/*-----------------------style for title-------------------------*/
+.title {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 0px 30px 0 0;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 40px 0px;
+
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    height: 4px;
+    width: 55vh; /* Adjust this to control the line length */
+    background-color: black;
+}

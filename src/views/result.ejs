@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "/css/result.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="container-top">
+            <!-- Khung chứa logo -->
+            <div class="logo">
+                <img src="../public/image/logo1.jpg" alt="Logo">
+            </div>
+            
+            <div class="topnav-mid">
+                <!-- Khung tìm kiếm -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <select>
+                        <option value="binhdinh">Bình Định</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="hcm">TP. Hồ Chí Minh</option>
+                        <option value="danang">Đà Nẵng</option>
+                        <option value="haiphong">Hải Phòng</option>
+                        <option value="cantho">Cần Thơ</option>
+                        <!-- Thêm các tỉnh khác tương tự -->
+                    </select>
+                    <!-- <a href="/res" class="button">Search</a> -->
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <div class="topnav-right">
+                <!-- Các liên kết điều hướng -->
+                <a href="/">Trang chủ</a>
+                <a href="/about_us">Về chúng tôi</a>
+                <a href="/contact">Liên hệ</a>
+            </div>           
+        </div>
+    </div>
+
+    <div class="job-categories">
+        <a href="/phucvu" class="button">Phục vụ</a>
+        <a href="/banhang" class="button">Bán hàng</a>
+        <a href="/letan" class="button">Lễ tân</a>
+        <a href="/phache" class="button">Pha chế</a>
+        <a href="/khac" class="button">Khác</a>
+    </div>
+
+    <div class="table-container">
+        <div class="title">Kết quả tìm kiếm</div>
+        <table>
+
+            <tr>
+                <th>Content</th>
+                <th>Link</th>
+            </tr>
+            
+
+            <% listJobs.forEach(function(job) { %>
+                <tr>
+                    <td class="content">
+                        <%= job.content%>
+                    </td>
+                    <td>
+                        <a href="<%= job.url %>" target="_blank"><%= job.url %></a>
+                    </td>
+                </tr>
+            <% }) %>
+
+        </table>
+    </div>
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contentElements = document.querySelectorAll('.content');
+        contentElements.forEach(element => {
+            const maxLength = 300; // Giới hạn số ký tự
+            const content = element.textContent;
+
+            if (content.length > maxLength) {
+                element.textContent = content.substring(0, maxLength) + '...';
+            }
+        });
+    });
+</script>
+
+</html>

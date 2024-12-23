@@ -1,0 +1,62 @@
+/*reset margin and padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------------table result-----------------*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 24px;
+}
+
+th:nth-child(1), td:nth-child(1),
+th:nth-child(2), td:nth-child(2) {
+    width: 40%; /* Chiều rộng cho hai cột đầu */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 20%; /* Chiều rộng cho cột cuối */
+}
+
+td:nth-child(3) {
+    font-size: 24px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    word-wrap: break-word; /* Để nội dung xuống dòng nếu quá dài */
+}
+
+tr:hover {background-color: #f2f2f2;}
+
+.table-container {
+    padding: 15px 20px;
+}
+
+a {
+    color: blue;
+}
+
+/*-----------------style cho button trang chủ-----------------*/
+.container a {
+    font-size: 24px;
+    padding: 20px 20px;
+    text-decoration: none; /* Không có gạch chân */
+    color: white; /* Thay đổi màu chữ nếu cần */
+    font-weight: bold;
+    /*background: linear-gradient(to right, #5fccff, #7be4fe); /* Thay đổi màu gradient theo ý muốn */
+    background-color: black;
+    border-radius: 5px; /* Tùy chọn: bo góc cho nút */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Căn giữa theo chiều ngang */
+}
