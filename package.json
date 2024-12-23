@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "built a website with nodejs",
   "main": "server.js",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node /server.js",
-    "app": "nodemon /server.js"
+    "start": "node ./server.js",
+    "app": "nodemon ./server.js"
   },
   "keywords": [
     "nodejs"
