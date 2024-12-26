@@ -4,6 +4,24 @@
     padding: 0;
 }
 
+/*set background*/
+body {
+    background-image: url('../image/result_bg.png');
+    background-size: contain; /* Giữ kích thước gốc của ảnh */
+    background-position: top center; /* Đặt ảnh ở trên cùng và canh giữa */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+}
+
+.logo {
+    background-image: url('../image/logo.jpg'); /* Đường dẫn tới ảnh */
+    background-size: contain; /* Giữ nguyên tỷ lệ ảnh */
+    background-position: center; /* Canh giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    width: 100px; /* Chiều rộng tùy chỉnh */
+    height: 100px; /* Chiều cao tùy chỉnh */
+}
+
+
 /* Styling topnav container */
 .topnav {
     margin-left: auto;
@@ -84,7 +102,7 @@
 /* Style the links inside the navigation bar */
 .topnav-right a {
     margin: 0 10px; /* Tạo khoảng cách 15px ở hai bên */
-    color: black;
+    color: white;
     text-align: center;
     padding: 15px 20px;
     text-decoration: none; /*sử dụng tạo liên kết không có gạch chân*/
@@ -94,9 +112,9 @@
 
 /* Change the color of links on hover */
 .topnav-right a:hover {
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
     font-size: 24px !important;
-    background-color: black !important
+    background-color: rgb(255, 255, 255) !important
     /*border-bottom: 4px solid white;*/
 }
 

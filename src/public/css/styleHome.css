@@ -12,6 +12,15 @@ body {
     background-repeat: no-repeat; /* Không lặp lại ảnh */
 }
 
+.logo {
+    background-image: url('../image/logo.jpg'); /* Đường dẫn tới ảnh */
+    background-size: contain; /* Giữ nguyên tỷ lệ ảnh */
+    background-position: center; /* Canh giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    width: 100px; /* Chiều rộng tùy chỉnh */
+    height: 100px; /* Chiều cao tùy chỉnh */
+}
+
 /* Styling topnav container */
 .topnav {
     margin-left: auto;
