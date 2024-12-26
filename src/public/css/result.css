@@ -102,7 +102,7 @@
 
 /*--------------button job categoties--------------*/
 .job-categories {
-    padding-left: 15.5vw;
+    padding-left: 14.5vw;
     display: flex;
     gap: 5px; 
 }
@@ -133,15 +133,23 @@ table {
 
 th {
     font-size: 24px;
-    background-color: #d9d9d9;
+    background-color: #afaeae;
 }
 
 th, td {
     padding: 8px;
     text-align: left;
     border-bottom: 2px solid #ddd;
-    width: 50%; /* Chiều rộng ngang nhau cho cả hai ô */
+    /* width: 50%; Chiều rộng ngang nhau cho cả hai ô */
     word-wrap: break-word; /* Để nội dung xuống dòng nếu quá dài */
+}
+
+th:first-child, td:first-child {
+    width: 25%; /* Cột đầu tiên chiếm 30% */
+}
+
+th:last-child, td:last-child {
+    width: 75%; /* Cột thứ hai chiếm 70% */
 }
 
 tr:hover {background-color: #f2f2f2;}

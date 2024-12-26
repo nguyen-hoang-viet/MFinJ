@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MFinJ | Kết quả</title>
     <link rel="stylesheet" href= "/css/result.css">
 </head>
 
@@ -17,7 +17,7 @@
             <div class="topnav-mid">
                 <!-- Khung tìm kiếm -->
                 <div class="search-bar">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Tìm kiếm...">
                     <select>
                         <option value="binhdinh">Bình Định</option>
                         <option value="hanoi">Hà Nội</option>
@@ -28,7 +28,7 @@
                         <!-- Thêm các tỉnh khác tương tự -->
                     </select>
                     <!-- <a href="/res" class="button">Search</a> -->
-                    <button>Search</button>
+                    <button>Tìm kiếm</button>
                 </div>
             </div>
 
@@ -54,19 +54,19 @@
         <table>
 
             <tr>
-                <th>Content</th>
-                <th>Link</th>
+                <th>Liên kết</th>
+                <th>Nội dung</th>
             </tr>
             
 
             <% listJobs.forEach(function(job) { %>
                 <tr>
-                    <td class="content">
-                        <%= job.content%>
-                    </td>
                     <td>
                         <a href="<%= job.url %>" target="_blank"><%= job.url %></a>
                     </td>
+                    <td class="content">
+                        <%= job.content%>
+                    </td>                   
                 </tr>
             <% }) %>
 
@@ -88,5 +88,4 @@
         });
     });
 </script>
-
 </html>
