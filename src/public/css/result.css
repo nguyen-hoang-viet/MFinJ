@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    color-scheme: light;
+}
+
 /*set background*/
 body {
     background-image: url('../image/result_bg.png');
@@ -14,13 +18,13 @@ body {
 
 .logo {
     background-image: url('../image/logo.jpg'); /* Đường dẫn tới ảnh */
-    background-size: contain; /* Giữ nguyên tỷ lệ ảnh */
+    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
     background-position: center; /* Canh giữa ảnh */
     background-repeat: no-repeat; /* Không lặp lại ảnh */
     width: 100px; /* Chiều rộng tùy chỉnh */
     height: 100px; /* Chiều cao tùy chỉnh */
+    border-radius: 15px;
 }
-
 
 /* Styling topnav container */
 .topnav {
@@ -204,3 +208,33 @@ a {
     width: 55vh; /* Adjust this to control the line length */
     background-color: black;
 }
+
+.content {
+    font-size: 16px;
+}
+/* Giới hạn số dòng hiển thị trong nội dung */
+.limited-lines {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5; /* Giới hạn 5 dòng */
+    white-space: pre-wrap; /* Để giữ định dạng xuống dòng */
+}
+
+.toggle-btn {
+    color: rgb(0, 0, 0); /* Màu chữ */
+    border: none; /* Bỏ viền */
+    border-radius: 5px; /* Bo góc */
+    padding: 8px 12px; /* Khoảng cách nội dung */
+    font-size: 14px; /* Kích thước chữ */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng hover */
+.toggle-btn:hover {
+    background-color: #000000; /* Màu khi hover */
+    color: white;
+}
+

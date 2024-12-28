@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
     <title>MFinJ | Kết quả</title>
     <link rel="stylesheet" href= "/css/result.css">
 </head>
@@ -66,7 +67,8 @@
                         <a href="<%= job.url %>" target="_blank"><%= job.url %></a>
                     </td>
                     <td class="content">
-                        <%= job.content%>
+                        <pre class="limited-lines" id="content-<%= job.id %>"><%= job.content %></pre>
+                        <button class="toggle-btn" id="button-<%= job.id %>" onclick="toggleContent('<%= job.id %>')">Xem thêm</button>
                     </td>                   
                 </tr>
             <% }) %>
@@ -77,16 +79,18 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const contentElements = document.querySelectorAll('.content');
-        contentElements.forEach(element => {
-            const maxLength = 300; // Giới hạn số ký tự
-            const content = element.textContent;
+    function toggleContent(id) {
+        const content = document.getElementById(`content-${id}`);
+        const button = document.getElementById(`button-${id}`);
 
-            if (content.length > maxLength) {
-                element.textContent = content.substring(0, maxLength) + '...';
-            }
-        });
-    });
+        // Kiểm tra nếu nội dung đang bị giới hạn
+        if (content.classList.contains('limited-lines')) {
+            content.classList.remove('limited-lines'); // Hiển thị toàn bộ nội dung
+            button.textContent = 'Thu gọn'; // Đổi nội dung nút
+        } else {
+            content.classList.add('limited-lines'); // Giới hạn nội dung lại
+            button.textContent = 'Xem thêm'; // Đổi lại nội dung nút
+        }
+    }
 </script>
 </html>
