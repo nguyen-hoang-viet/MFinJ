@@ -13,13 +13,12 @@ body {
 }
 
 .logo {
-    background-image: url('../image/logo.jpg'); /* Đường dẫn tới ảnh */
+    background-image: url('../image/logo.png'); /* Đường dẫn tới ảnh */
     background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
     background-position: center; /* Canh giữa ảnh */
     background-repeat: no-repeat; /* Không lặp lại ảnh */
     width: 100px; /* Chiều rộng tùy chỉnh */
-    height: 100px; /* Chiều cao tùy chỉnh */
-    border-radius: 15px;
+    height: 43px; /* Chiều cao tùy chỉnh */
 }
 
 /* Styling topnav container */
@@ -34,14 +33,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-/* Styling logo container */
-.logo img {
-    width: 108px; /* Đặt kích thước logo */
-    height: 108px;
-    object-fit: contain;
-    /*border-radius: 10px;*/
 }
 
 /* Styling search bar */
@@ -127,10 +118,25 @@ body {
 }
 
 /*--------------button job categoties--------------*/
+.job-categories-container {
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.empty-left{
+    width: 100px;
+}
+
 .job-categories {
-    padding-left: 14.5vw;
     display: flex;
     gap: 5px; 
+    padding-top: 5px;
+}
+
+.empty-right{
+    width: 506.88;
 }
 
 .job-categories a {
