@@ -60,6 +60,7 @@
             <tr>
                 <th>Liên kết</th>
                 <th>Nội dung</th>
+                <th>Ngày đăng</th>
             </tr>
             
 
@@ -71,6 +72,10 @@
                     <td class="content">
                         <pre class="limited-lines" id="content-<%= job.id %>"><%= job.content %></pre>
                         <button class="toggle-btn" id="button-<%= job.id %>" onclick="toggleContent('<%= job.id %>')">Xem thêm</button>
+                    </td>
+                    <td class="date_created">
+                        <%= job.date %>
+                        (<%= job.date_created %> ngày trước) 
                     </td>                   
                 </tr>
             <% }) %>
@@ -85,12 +90,13 @@
         const content = document.getElementById(`content-${id}`);
         const button = document.getElementById(`button-${id}`);
 
-        // Kiểm tra nếu nội dung đang bị giới hạn
         if (content.classList.contains('limited-lines')) {
-            content.classList.remove('limited-lines'); // Hiển thị toàn bộ nội dung
+            content.classList.remove('limited-lines'); // Bỏ giới hạn
+            content.classList.add('full-content'); // Thêm ngắt dòng tự động
             button.textContent = 'Thu gọn'; // Đổi nội dung nút
         } else {
-            content.classList.add('limited-lines'); // Giới hạn nội dung lại
+            content.classList.remove('full-content'); // Bỏ ngắt dòng
+            content.classList.add('limited-lines'); // Giới hạn lại
             button.textContent = 'Xem thêm'; // Đổi lại nội dung nút
         }
     }
