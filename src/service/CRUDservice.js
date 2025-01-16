@@ -23,7 +23,7 @@ const getphache = async () => {
 
 
 const getkhac = async () => {
-    let [results, fields] = await connection.query("select content, url, id, date, date_created from jobs where job = 'khác' order by date_created ASC");
+    let [results, fields] = await connection.query("select content, url, id, date, date_created from jobs where job = 'None' order by date_created ASC");
     return results;
 };
 
