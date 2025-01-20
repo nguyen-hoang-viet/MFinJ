@@ -4,27 +4,128 @@
     padding: 0;
 }
 
-/*set background*/
 body {
-    background-image: url('../image/pageNotFound.png');
-    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
-    background-position: center; /* Canh giữa ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh */
-}
-
-a {
-    font-size: 24px;
-    padding: 20px 20px;
-    text-decoration: none; /* Không có gạch chân */
-    color: white; /* Thay đổi màu chữ nếu cần */
-    font-weight: bold;
-    /*background: linear-gradient(to right, #5fccff, #7be4fe); /* Thay đổi màu gradient theo ý muốn */
-    background-color: black;
-    border-radius: 5px; /* Tùy chọn: bo góc cho nút */
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    height: 90%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
 }
 
 .container {
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 100px); /* Trừ đi khoảng cách margin hai bên */
+    height: calc(100% - 50px); /* Trừ đi khoảng cách margin trên dưới */
+    margin: 50px; /* Cách đều các cạnh của body */
+    border-radius: 30px;
+    background-color: #333;
+    box-sizing: border-box;
 }
 
+.contact-right {
+    flex: 1;
+    margin: 50px;
+    padding: 50px;
+    background-color: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.contact-left {
+    flex: 1;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-left h1 {
+    color: #AE0000;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-right h1 {
+    margin-bottom: 40px;
+    text-align: center; /* Căn giữa nội dung văn bản */
+    size: 48px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 50px;
+    border: none; /* Loại bỏ viền */
+    border-bottom: 2px solid #555; /* Chỉ giữ lại viền dưới */
+    background-color: transparent; /* Làm nền trong suốt */
+    color: #fff; /* Màu chữ */
+    outline: none; /* Loại bỏ viền mặc định khi focus */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+    padding-bottom: 10px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus {
+    border-bottom-color: #fff; /* Đổi màu viền dưới khi focus */
+}
+
+form textarea {
+    margin-bottom: 15px;
+    border: none; /* Loại bỏ viền */
+    border-bottom: 2px solid #555; /* Chỉ giữ lại viền dưới */
+    background-color: transparent; /* Làm nền trong suốt */
+    color: #fff; /* Màu chữ */
+    outline: none; /* Loại bỏ viền mặc định khi focus */
+    height: 70px;
+}
+
+form textarea:focus {
+    border-bottom-color: #fff;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkred;
+}
