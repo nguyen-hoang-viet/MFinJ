@@ -7,9 +7,64 @@
 /*set background*/
 body {
     background-image: url('../image/background_homepage.jpg');
-    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
-    background-position: center; /* Canh giữa ảnh */
+    background-size: contain; /* Giữ kích thước gốc của ảnh */
+    background-position: top center; /* Đặt ảnh ở trên cùng và canh giữa */
     background-repeat: no-repeat; /* Không lặp lại ảnh */
+}
+
+a {
+
+}
+
+.post_1 {
+    background-image: url('../image/blind_box.jpg');
+    background-size: cover;
+    margin-top: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 743px;
+    width: 1320px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+    transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
+}
+
+.post_1:hover {
+    transform: scale(1.03); /* Phóng to khi hover */
+}
+
+.post_2 {
+    background-image: url('../image/phuong_nguyen.jpg');
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 743px;
+    width: 1320px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+    transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
+}
+
+.post_2:hover {
+    transform: scale(1.03); /* Phóng to khi hover */
+}
+
+.post_3 {
+    background-image: url('../image/hong_hung.jpg');
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 743px;
+    width: 1320px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+    transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
+}
+
+.post_3:hover {
+    transform: scale(1.03); /* Phóng to khi hover */
 }
 
 .logo {
