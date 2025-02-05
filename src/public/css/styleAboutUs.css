@@ -6,24 +6,111 @@
 
 /*set background*/
 body {
-    background-image: url('../image/pageNotFound.png');
-    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
-    background-position: center; /* Canh giữa ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh */
-}
-
-a {
-    font-size: 24px;
-    padding: 20px 20px;
-    text-decoration: none; /* Không có gạch chân */
-    color: white; /* Thay đổi màu chữ nếu cần */
-    font-weight: bold;
-    /*background: linear-gradient(to right, #5fccff, #7be4fe); /* Thay đổi màu gradient theo ý muốn */
-    background-color: black;
-    border-radius: 5px; /* Tùy chọn: bo góc cho nút */
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    height: 90%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
 }
 
 .container {
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 100px); /* Trừ đi khoảng cách margin hai bên */
+    height: calc(100% - 50px); /* Trừ đi khoảng cách margin trên dưới */
+    margin: 50px; /* Cách đều các cạnh của body */
+    border-radius: 30px;
+    background-color: #333;
+    box-sizing: border-box;
+}
+
+.contact-left {
+    flex: 1;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.circle-button {
+    width: 60px; /* Đường kính của nút */
+    height: 60px; /* Đường kính của nút */
+    background-color: black; /* Màu nền nút */
+    border: 2px; /* Đường viền */
+    border-radius: 50%; /* Làm tròn nút */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+    transition: transform 0.2s ease; /* Hiệu ứng khi bấm */
+}
+
+.circle-button:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+.circle-button:active {
+    transform: scale(0.95); /* Nhỏ lại khi nhấn */
+}
+
+.contact-left .title {
+    color: #AE0000;
+    font-size: 70px;
+    font-weight: bold;
+    width: 100%;       /* Chiều rộng đầy đủ container */
+    text-align: center; /* Văn bản căn giữa */
+    margin-bottom: 50px;
+}
+
+.contact-left .line_1 {
+    margin-bottom: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.contact-left .line_2 {
+    margin-bottom: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.contact-left .line_3 {
+    margin-bottom: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.contact_button {
+    display: inline-block;
+    color: black;
+    background-color: #AE0000;
+    padding: 10px 40px;
+    text-decoration: none;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.contact_button:hover {
+    background-color: #e90404; /* Thay đổi màu khi hover */
+}
+
+.contact-right {
+    width: 450px; /* Đặt chiều rộng */
+    height: 550px; /* Đặt chiều cao */
+    background-image: url('../image/pic_for_about_us.png'); /* Đường dẫn hình nền */
+    background-size: cover; /* Hình nền bao phủ toàn bộ thẻ */
+    background-position: center; /* Căn giữa hình nền */
+    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    margin-right: 100px;
 }
