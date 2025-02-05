@@ -29,7 +29,7 @@ body {
     margin: 50px;
     padding: 50px;
     background-color: black;
-    border-radius: 10px;
+    border-radius: 20px;
     box-sizing: border-box;
 }
 
@@ -48,8 +48,34 @@ body {
     justify-content: space-between;
 }
 
-.contact-left h1 {
+.circle-button {
+    width: 60px; /* Đường kính của nút */
+    height: 60px; /* Đường kính của nút */
+    background-color: black; /* Màu nền nút */
+    border: 2px; /* Đường viền */
+    border-radius: 50%; /* Làm tròn nút */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+    transition: transform 0.2s ease; /* Hiệu ứng khi bấm */
+}
+
+.circle-button:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+.circle-button:active {
+    transform: scale(0.95); /* Nhỏ lại khi nhấn */
+}
+
+.contact-left .title {
     color: #AE0000;
+    font-size: 70px;
+    font-weight: bold;
+    width: 100%;       /* Chiều rộng đầy đủ container */
+    text-align: center; /* Văn bản căn giữa */
 }
 
 .contact-info {
@@ -57,18 +83,25 @@ body {
 }
 
 .contact-info p {
-    margin: 10px 0;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 24px;
 }
 
 .contact-info a {
     color: white;
     text-decoration: none;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .social-icons {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    font-size: 40px;
 }
 
 .contact-right h1 {
