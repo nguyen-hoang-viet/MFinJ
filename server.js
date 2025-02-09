@@ -11,6 +11,10 @@ const hostname = process.env.HOST_NAME;
 // config template engine
 configViewEngine(app)
 
+// Middleware để parse dữ liệu từ form
+app.use(express.urlencoded({ extended: true })); // Xử lý dữ liệu từ form (application/x-www-form-urlencoded)
+app.use(express.json()); // Xử lý dữ liệu JSON (application/json)
+
 //khai báo route
 app.use('/', webRoutes)
 

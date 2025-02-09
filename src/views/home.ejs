@@ -14,7 +14,7 @@
             <div class="topnav-mid">
                 <!-- Khung tìm kiếm -->
                 <div class="search-bar">
-                    <input type="text" placeholder="Tìm kiếm...">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm...">
                     <select>
                         <option value="binhdinh">Bình Định</option>
                         <option value="hanoi">Hà Nội</option>
@@ -24,8 +24,8 @@
                         <option value="cantho">Cần Thơ</option>
                         <!-- Thêm các tỉnh khác tương tự -->
                     </select>
-                    <!-- <a href="/res" class="button">Search</a> -->
-                    <button>Tìm kiếm</button>
+                    <!-- <a href="/search" class="button">Tìm kiếm</a> -->
+                    <button id="searchButton">Tìm kiếm</button>
                 </div>
             </div>
 
@@ -63,6 +63,7 @@
             Here’s a tool we provide that integrates AI to search for job postings on Facebook, focusing on three key factors: easy of use, speed, and accuracy.
         </div>
     </div>
+
     <a href="https://www.facebook.com/share/p/18UZYMsuiC/" target="_blank">
         <div class="post_1">
         </div>
@@ -77,5 +78,7 @@
         <div class="post_3">
         </div>
     </a>
+
+    <script src="/js/search.js"></script>
 </body>
 </html>

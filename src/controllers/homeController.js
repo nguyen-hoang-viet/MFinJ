@@ -1,4 +1,4 @@
-const connection = require('../config/database')
+const Fuse = require("fuse.js");
 const {
     getphucvu,
     getbanhang,
@@ -52,10 +52,41 @@ const getkhacPage = async (req, res) => {
     return res.render("result.ejs", { listJobs: results });
 };
 
-const getdatabasePage = async (req, res) => {
-    let results = await getdatabase();
-    return res.render("showDB.ejs", { listJobs: results });
-};
+const postSubmitContactForm = async (req, res) => {
+    console.log(">>>>>>> req.body:", req.body);
+
+    // const { name, email, phone, message } = req.body;
+
+    res.redirect("/contact");
+}
+
+const getSearchFunction = async (req, res) => {
+    const { query } = req.query;
+
+    try {
+        const data = await getdatabase();
+
+        // Cấu hình Fuse.js
+        const fuse = new Fuse(data, {
+            keys: ["content"], // Tìm kiếm trên cột content
+            threshold: 1,    // Độ chính xác
+            includeScore: true,
+            tokenize: true,
+            findAllMatches: true,
+        });
+
+        // Tìm kiếm dữ liệu
+        // const result = fuse.search(query).map(item => item.item);
+        const result = query ? fuse.search(query).map(item => item.item) : rows;
+    
+        // res.json(result);
+        console.log(">>>>>>Result: ")
+
+        return res.render("search_res.ejs", { query, result });
+    } catch (error) {
+        res.status(500).json({ error: "Lỗi server" });
+    }
+}
 
 
 module.exports = {
@@ -69,5 +100,6 @@ module.exports = {
     getphachePage,
     getkhacPage,
 
-    getdatabasePage
+    postSubmitContactForm,
+    getSearchFunction
 };

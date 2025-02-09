@@ -12,10 +12,6 @@ body {
     background-repeat: no-repeat; /* Không lặp lại ảnh */
 }
 
-a {
-
-}
-
 .post_1 {
     background-image: url('../image/blind_box.jpg');
     background-size: cover;
@@ -107,17 +103,6 @@ a {
     outline: none;
 }
 
-/* .search-bar a {
-    padding: 10px 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: #000000;
-    color: white;
-    cursor: pointer;
-    font-size: 24px;
-    text-decoration: none;
-} */
-
 .search-bar select{
     font-size: 24px;
     border: none;
@@ -132,6 +117,7 @@ a {
     color: white;
     cursor: pointer;
     font-size: 24px;
+    text-decoration: none;
 }
 
 .search-bar button:hover {

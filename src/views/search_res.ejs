@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả tìm kiếm</title>
+</head>
+<body>
+    <h2>Kết quả tìm kiếm cho: "<%= query %>"</h2>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Content</th>
+                <th>URL</th>
+                <th>Job</th>
+                <th>Date</th>
+                <th>Date Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% result.forEach(item => { %>
+                <tr>
+                    <td><%= item.id %></td>
+                    <td><%= item.content %></td>
+                    <td><%= item.url %></td>
+                    <td><%= item.job %></td>
+                    <td><%= item.date %></td>
+                    <td><%= item.date_created %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
