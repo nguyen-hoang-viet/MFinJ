@@ -1,36 +1,104 @@
-<!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả tìm kiếm</title>
+    <link rel="stylesheet" href= "/css/searchResult.css">
 </head>
+
 <body>
-    <h2>Kết quả tìm kiếm cho: "<%= query %>"</h2>
-    
-    <table border="1">
-        <thead>
+    <div class="topnav">
+        <div class="container-top">
+            <div class="logo" aria-label="Logo"></div>
+
+            <div class="topnav-mid">
+                <!-- Khung tìm kiếm -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                    <select>
+                        <option value="binhdinh">Bình Định</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="hcm">TP. Hồ Chí Minh</option>
+                        <option value="danang">Đà Nẵng</option>
+                        <option value="haiphong">Hải Phòng</option>
+                        <option value="cantho">Cần Thơ</option>
+                        <!-- Thêm các tỉnh khác tương tự -->
+                    </select>
+                    <!-- <a href="/search" class="button">Tìm kiếm</a> -->
+                    <button id="searchButton">Tìm kiếm</button>
+                </div>
+            </div>
+
+            <div class="topnav-right">
+                <!-- Các liên kết điều hướng -->
+                <a href="/">Trang chủ</a>
+                <a href="/about_us">Về chúng tôi</a>
+                <a href="/contact">Liên hệ</a>
+            </div>           
+        </div>
+    </div>
+
+    <div class="job-categories-container">
+        <div class="empty-left"></div>
+
+        <div class="job-categories">
+            <a href="/phucvu" class="button">Phục vụ</a>
+            <a href="/banhang" class="button">Bán hàng</a>
+            <a href="/letan" class="button">Lễ tân</a>
+            <a href="/phache" class="button">Pha chế</a>
+            <a href="/khac" class="button">Khác</a>
+        </div>
+        
+        <div class="empty-right"></div>
+    </div>
+
+    <div class="table-container">
+        <div class="title">Kết quả tìm kiếm</div>
+        <table>
+
             <tr>
-                <th>ID</th>
-                <th>Content</th>
-                <th>URL</th>
-                <th>Job</th>
-                <th>Date</th>
-                <th>Date Created</th>
+                <th>Liên kết</th>
+                <th>Nội dung</th>
+                <th>Ngày đăng</th>
             </tr>
-        </thead>
-        <tbody>
+            
+
             <% result.forEach(item => { %>
                 <tr>
-                    <td><%= item.id %></td>
-                    <td><%= item.content %></td>
-                    <td><%= item.url %></td>
-                    <td><%= item.job %></td>
-                    <td><%= item.date %></td>
-                    <td><%= item.date_created %></td>
+                    <td>
+                        <a href="<%= item.url %>" target="_blank"><%= item.url %></a>
+                    </td>
+                    <td class="content">
+                        <pre class="limited-lines" id="content-<%= item.id %>"><%= item.content %></pre>
+                        <button class="toggle-btn" id="button-<%= item.id %>" onclick="toggleContent('<%= item.id %>')">Xem thêm</button>
+                    </td>
+                    <td class="date_created">
+                        <%= item.date %>
+                        (<%= item.date_created %> ngày trước) 
+                    </td>                   
                 </tr>
-            <% }); %>
-        </tbody>
-    </table>
+            <% }) %>
+
+        </table>
+    </div>
+
 </body>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(`content-${id}`);
+        const button = document.getElementById(`button-${id}`);
+
+        if (content.classList.contains('limited-lines')) {
+            content.classList.remove('limited-lines'); // Bỏ giới hạn
+            content.classList.add('full-content'); // Thêm ngắt dòng tự động
+            button.textContent = 'Thu gọn'; // Đổi nội dung nút
+        } else {
+            content.classList.remove('full-content'); // Bỏ ngắt dòng
+            content.classList.add('limited-lines'); // Giới hạn lại
+            button.textContent = 'Xem thêm'; // Đổi lại nội dung nút
+        }
+    }
+</script>
+
 </html>

@@ -80,7 +80,6 @@ const getSearchFunction = async (req, res) => {
         const result = query ? fuse.search(query).map(item => item.item) : rows;
     
         // res.json(result);
-        console.log(">>>>>>Result: ")
 
         return res.render("search_res.ejs", { query, result });
     } catch (error) {
