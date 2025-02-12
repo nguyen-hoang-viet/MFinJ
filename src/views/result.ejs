@@ -15,7 +15,7 @@
             <div class="topnav-mid">
                 <!-- Khung tìm kiếm -->
                 <div class="search-bar">
-                    <input type="text" placeholder="Tìm kiếm...">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm...">
                     <select>
                         <option value="binhdinh">Bình Định</option>
                         <option value="hanoi">Hà Nội</option>
@@ -26,7 +26,7 @@
                         <!-- Thêm các tỉnh khác tương tự -->
                     </select>
                     <!-- <a href="/res" class="button">Search</a> -->
-                    <button>Tìm kiếm</button>
+                    <button id="searchButton">Tìm kiếm</button>
                 </div>
             </div>
 
@@ -84,6 +84,8 @@
     </div>
 
 </body>
+
+<script src="/js/search.js"></script>
 
 <script>
     function toggleContent(id) {

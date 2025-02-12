@@ -12,55 +12,33 @@ body {
     background-repeat: no-repeat; /* Không lặp lại ảnh */
 }
 
-.post_1 {
-    background-image: url('../image/blind_box.jpg');
-    background-size: cover;
+.top-posts {
     margin-top: 250px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 743px;
-    width: 1320px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
-    transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột */
+    gap: 10px; /* Khoảng cách giữa các cột và hàng */
 }
 
-.post_1:hover {
-    transform: scale(1.03); /* Phóng to khi hover */
+.top-posts a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
 }
 
-.post_2 {
-    background-image: url('../image/phuong_nguyen.jpg');
+.post_1, .post_2, .post_3 {
+    background-color: lightgray; /* Màu nền để dễ thấy */
+    height: 225px; /* Chiều cao cố định */
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 8px; /* Bo góc */
     background-size: cover;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 743px;
-    width: 1320px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
-    transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
-}
-
-.post_2:hover {
-    transform: scale(1.03); /* Phóng to khi hover */
-}
-
-.post_3 {
-    background-image: url('../image/hong_hung.jpg');
-    background-size: cover;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 743px;
-    width: 1320px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
-    transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
-}
-
-.post_3:hover {
-    transform: scale(1.03); /* Phóng to khi hover */
+    background-position: center;
+    background-image: var(--bg-img);
 }
 
 .logo {
@@ -225,15 +203,4 @@ body {
 .text {
     font-size: 24px;
 }
-
-
-
-
-
-
-
-
-
-
-
 

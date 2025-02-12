@@ -2,11 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const configViewEngine = require('./src/config/viewEngine')
 const webRoutes = require('./src/route/web')
-const connection = require('./src/config/database')
+const path = require("path");
 
 const app = express();
 const port = process.env.PORT || 8888; // if PORT not in .env file get 8888
 const hostname = process.env.HOST_NAME;
+
+// Cấu hình thư mục `public` làm thư mục tĩnh
+app.use(express.static(path.join(__dirname, "public")));
 
 // config template engine
 configViewEngine(app)
