@@ -13,33 +13,53 @@ body {
 }
 
 .top-posts {
-    margin-top: 250px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 250px;
+    margin-bottom: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cột */
-    gap: 10px; /* Khoảng cách giữa các cột và hàng */
-}
-
-.top-posts a {
-    text-decoration: none;
-    display: block;
+    grid-template-columns: 20% 10% 20% 10% 20% 10%; /* Chia 4 cột */
+    gap: 10px;
+    align-items: center;
+    text-align: center;
     width: 100%;
+    max-width: 100%;
 }
 
-.post_1, .post_2, .post_3 {
-    background-color: lightgray; /* Màu nền để dễ thấy */
-    height: 225px; /* Chiều cao cố định */
-    width: 400px;
+/* Cột chứa ảnh */
+.post-image {
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Điều chỉnh chiều cao */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào ảnh */
+.post-image:hover {
+    transform: scale(1.05); /* Phóng to nhẹ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+}
+
+/* Cột chứa văn bản */
+.post-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    border-radius: 8px; /* Bo góc */
-    background-size: cover;
-    background-position: center;
-    background-image: var(--bg-img);
 }
+
+.post-text a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.post-text a:hover {
+    color: #007bff;
+}
+
 
 .logo {
     background-image: url('../image/logo.png'); /* Đường dẫn tới ảnh */
