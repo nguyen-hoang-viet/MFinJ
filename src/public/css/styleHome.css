@@ -12,55 +12,6 @@ body {
     background-repeat: no-repeat; /* Không lặp lại ảnh */
 }
 
-.top-posts {
-    margin-left: 20px;
-    margin-top: 250px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: 20% 10% 20% 10% 20% 10%; /* Chia 4 cột */
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    max-width: 100%;
-}
-
-/* Cột chứa ảnh */
-.post-image {
-    background-image: var(--bg-img);
-    background-size: cover;
-    background-position: center;
-    height: 200px; /* Điều chỉnh chiều cao */
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hiệu ứng khi di chuột vào ảnh */
-.post-image:hover {
-    transform: scale(1.05); /* Phóng to nhẹ */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng */
-}
-
-/* Cột chứa văn bản */
-.post-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.post-text a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.post-text a:hover {
-    color: #007bff;
-}
-
-
 .logo {
     background-image: url('../image/logo.png'); /* Đường dẫn tới ảnh */
     background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
@@ -224,3 +175,158 @@ body {
     font-size: 24px;
 }
 
+/*--------------Top_posts--------------*/
+
+/* Phần bao ngoài với nền gradient */
+.top-posts-section {
+    margin-top: 250px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+/* Tiêu đề chính */
+.section-title {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+/* Layout dạng grid với 4 cột */
+.top-posts {
+    display: grid;
+    grid-template-columns: 35% 15% 35% 15%;
+    gap: 20px;
+    align-items: stretch;
+    justify-items: center;
+}
+
+/* Định dạng cho nội dung */
+.post-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.post-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.post-text a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.post-text a:hover {
+    color: #007bff;
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive: Trên máy tính bảng */
+@media (max-width: 1024px) {
+    .top-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: Trên điện thoại */
+@media (max-width: 600px) {
+    .top-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style cho phần modal */
+.modal {
+    display: none;              /* Ẩn modal mặc định */
+    position: fixed;            /* Định vị cố định */
+     z-index: 1000;              /* Đảm bảo modal nằm trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;             /* Cho phép cuộn nếu cần */
+    background-color: rgba(0, 0, 0, 0.9); /* Nền đen mờ */
+}
+
+/* Ảnh trong modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    animation: zoomIn 0.3s ease;
+}
+
+/* Hiệu ứng zoom in */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Nút đóng modal */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style cho ảnh ban đầu */
+.post-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.post-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.05);
+    cursor: pointer;
+}

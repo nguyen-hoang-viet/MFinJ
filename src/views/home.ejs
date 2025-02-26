@@ -64,52 +64,40 @@
         </div>
     </div>
 
-    <!-- <div class="top-posts">
-        <a href="https://www.facebook.com/share/p/18UZYMsuiC/" target="_blank">
-            <div class="post_1" style="--bg-img: url('/image/blind_box.jpg')">
+
+    <div class="top-posts-section">
+        <h2 class="section-title">Bài Viết Nổi Bật</h2>
+        <div class="top-posts">
+            <!-- Cột 1: Ảnh -->
+            <div class="post-image" style="background-image: url('/image/blind_box.jpg');" onclick="openModal(this)"></div>
+            <!-- Cột 2: Nội dung -->
+            <div class="post-text">
+                <a href="https://www.facebook.com/share/p/18UZYMsuiC/" target="_blank">Xem bài viết</a>
             </div>
-        </a>
-
-        <a href="https://www.facebook.com/share/p/1BDC98xH8y/" target="_blank">
-            <div class="post_2" style="--bg-img: url('/image/blind_box.jpg')">
+            <!-- Cột 3: Ảnh -->
+            <div class="post-image" style="background-image: url('/image/hong_hung.jpg');" onclick="openModal(this)"></div>
+            <!-- Cột 4: Nội dung -->
+            <div class="post-text">
+                <a href="https://www.facebook.com/share/p/15HP4yeNPz/" target="_blank">Xem bài viết</a>
             </div>
-        </a>
-
-        <a href="https://www.facebook.com/share/p/18PjesQ1Sq/" target="_blank">
-            <div class="post_3" style="--bg-img: url('/image/blind_box.jpg')">
+            <!-- Thêm bài viết -->
+            <div class="post-image" style="background-image: url('/image/phuong_nguyen.jpg');" onclick="openModal(this)"></div>
+            <div class="post-text">
+                <a href="https://www.facebook.com/share/p/19ASiRbzmG/" target="_blank">Xem bài viết</a>
             </div>
-        </a>
-    </div> -->
-
-    <div class="top-posts">
-        <!-- Cột 1: Ảnh -->
-        <div class="post-image" style="--bg-img: url('/image/blind_box.jpg')"></div>
-
-        <!-- Cột 2: Văn bản -->
-        <div class="post-text">
-            <a href="https://www.facebook.com/share/p/18UZYMsuiC/" target="_blank">Xem bài viết</a>
+            <!-- Bạn có thể thêm nhiều bài viết khác theo cùng cấu trúc -->
         </div>
 
-        <!-- Cột 3: Ảnh -->
-        <div class="post-image" style="--bg-img: url('/image/hong_hung.jpg')"></div>
-
-        <!-- Cột 4: Văn bản -->
-        <div class="post-text">
-            <a href="https://www.facebook.com/share/p/15HP4yeNPz/" target="_blank">Xem bài viết</a>
-        </div>
-
-        <!-- Cột 3: Ảnh -->
-        <div class="post-image" style="--bg-img: url('/image/phuong_nguyen.jpg')"></div>
-
-        <!-- Cột 4: Văn bản -->
-        <div class="post-text">
-            <a href="https://www.facebook.com/share/p/19ASiRbzmG/" target="_blank">Xem bài viết</a>
+            <!-- Modal hiển thị hình ảnh full màn hình -->
+        <div id="image-modal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image" alt="Enlarged Image">
         </div>
     </div>
 
-
 </body>
 
-<script src="/js/search.js"></script>
+<!-- <script src="/js/search.js"></script> -->
+<script src="/js/homePage.js"></script>
 
 </html>
