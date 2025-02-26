@@ -181,7 +181,7 @@ body {
 .top-posts-section {
     margin-top: 250px;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background: rgb(240 240 240);
 }
 
 /* Tiêu đề chính */
@@ -222,30 +222,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Arial', sans-serif;
-    background: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(to right, #84bdf1,  #89f5d1);
     border-radius: 8px;
     padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    animation: fadeInUp 0.5s ease forwards;
 }
 
 .post-text:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.post-text a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.post-text a:hover {
-    color: #007bff;
+    box-shadow: 0 0 20px rgba(47, 128, 237, 0.7);
 }
 
 /* Hiệu ứng fade-in */
